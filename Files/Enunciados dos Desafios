@@ -1,0 +1,14 @@
+1)
+O objetivo deste primeiro desafio é criar um  programa que indique o melhor palpiteiro da primeira rodada do mundial.
+
+Ao final da rodada, o programa deve exibir um ranking prévio com os melhores palpiteiros dos primeiros jogos.  O regulamento de pontos é baseado nos seguintes critérios:
+
+-10 pontos para acerto exato no placar.
+-5 pontos para vencedor ou empate.
+-0 ponto nenhuma das outras opções
+
+Não esqueça de focar na orientação a objetos, pois o desenvolvimento será incremental, ou seja, iremos adicionar novas funcionalidades nos novos desafios.
+
+Observação: não é necessário desenvolver uma interface gráfica, o programa deverá ser executado apenas no console.
+
+2)
