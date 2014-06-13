@@ -24,4 +24,18 @@ public class ExportadorDeDadosDosJogos {
         }
     }
 
+    public void exportar(){
+        FileWriter fileWriter = null;
+        this.PlacarDeTodosOsJogosParaString();
+        try {
+
+            fileWriter = new FileWriter(nomeDoArquivo);
+            fileWriter.write(registroJogos);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }
