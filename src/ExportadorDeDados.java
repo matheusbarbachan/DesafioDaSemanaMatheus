@@ -1,23 +1,18 @@
 import java.util.ArrayList;
 import java.io.*;
 
-public class ExportadorDeDadosDosJogos {
+public class ExportadorDeDados {
     private String registroJogos;
-    private ArrayList<Palpite> jogos;
+    private ArrayList<Palpite> listaDePalpites;
     final static String nomeDoArquivo = "Files\\ArquivoDeJogos.txt";
 
     public String PlacarDeUmJogoParaString(int index) {
-        return jogos.get(index).getTime1().getNome()
-                + " " +
-               jogos.get(index).getTime1().getGols()
-                + "_X_" +
-               jogos.get(index).getTime2().getGols()
-                + " " +
-               jogos.get(index).getTime2().getNome();
+        return listaDePalpites.get(index).toString();
+
     }
 
     public void PlacarDeTodosOsJogosParaString(){
-        for(int index = 0; index < jogos.size(); index++) {
+        for(int index = 0; index < listaDePalpites.size(); index++) {
             registroJogos = registroJogos
             + "\n" +
             PlacarDeUmJogoParaString(index);

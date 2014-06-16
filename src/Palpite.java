@@ -32,4 +32,8 @@ public class Palpite {
     public Time getTimeVencedor() {
         return timeVencedor;
     }
+
+    public String toString(){
+        return time1.toString() + " X " + time2.toString();
+    }
 }
