@@ -40,4 +40,25 @@ public class AnalisadorDePalpites {
     public void setPalpiteiros(ArrayList<Palpiteiro> palpiteiros) {
         this.palpiteiros = palpiteiros;
     }
+
+    public void addPlpiteiro(Palpiteiro palpiteiro){
+        this.palpiteiros.add(palpiteiro);
+    }
+
+    public void exportarDadosPalpiteiros(){
+        for(Palpiteiro p : palpiteiros){
+            p.exportarDadosDoPalpiteiro();
+        }
+    }
+
+    public void importarDadosPalpiteiros(){
+        for(Palpiteiro p : palpiteiros){
+            p.importarDadosDoPalpiteiro();
+        }
+    }
+
+    public void importarJogos(){
+        ImportadorDeDados importadorDeDados = new ImportadorDeDados("JogosReais.txt");
+        this.jogos = importadorDeDados.LerDadosDoArquivo();
+    }
 }

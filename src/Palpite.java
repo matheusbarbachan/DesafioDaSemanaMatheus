@@ -3,6 +3,12 @@ public class Palpite {
     Time timeVencedor;
 
 
+    public Palpite(Time time1, Time time2){
+        this.time1 = time1;
+        this.time2 = time2;
+        setTimeVencedor();
+    }
+
     public Time getTime1() {
         return time1;
     }
@@ -34,6 +40,6 @@ public class Palpite {
     }
 
     public String toString(){
-        return time1.toString() + " X " + time2.toString();
+        return time1.toString() + "X" + time2.toString() + "\n";
     }
 }

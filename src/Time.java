@@ -3,6 +3,11 @@ public class Time {
     private int gols;
     private boolean atHome;
 
+    public Time(int gols, String nome){
+        this.setNome(nome);
+        this.setGols(gols);
+    }
+
     public String getNome() {
         return nome;
     }

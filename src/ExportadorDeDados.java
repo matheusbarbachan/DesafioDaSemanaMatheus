@@ -4,7 +4,12 @@ import java.io.*;
 public class ExportadorDeDados {
     private String registroJogos;
     private ArrayList<Palpite> listaDePalpites;
-    final static String nomeDoArquivo = "Files\\ArquivoDeJogos.txt";
+    public String nomeDoArquivo;
+
+    public ExportadorDeDados(String nomeDoArquivo){
+        this.setNomeDoArquivo(nomeDoArquivo);
+        this.exportar();
+    }
 
     public String PlacarDeUmJogoParaString(int index) {
         return listaDePalpites.get(index).toString();
@@ -17,6 +22,14 @@ public class ExportadorDeDados {
             + "\n" +
             PlacarDeUmJogoParaString(index);
         }
+    }
+
+    public String getNomeDoArquivo() {
+        return nomeDoArquivo;
+    }
+
+    public void setNomeDoArquivo(String nomeDoArquivo){
+        this.nomeDoArquivo = nomeDoArquivo;
     }
 
     public void exportar(){
